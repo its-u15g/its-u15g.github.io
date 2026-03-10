@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITS U-15 | 国際旅行社が発足させたハンドボールチーム</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+        body { font-family: 'Noto Sans JP', sans-serif; scroll-behavior: smooth; }
+        
+        .brand-gradient {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+            font-weight: 900;
+            font-size: 1.25rem;
+            color: #1e293b;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #6366f1, #ec4899);
+            border-radius: 2px;
+        }
+
+        .staff-card {
+            background: #ffffff;
+            border-radius: 40px;
+            padding: 2.5rem 1.5rem;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            border: 1px solid #f1f5f9;
+        }
+
+        .info-label {
+            font-size: 11px;
+            font-weight: 900;
+            color: #6366f1;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: flex;
+            items: center;
+            margin-bottom: 4px;
+        }
+        
+        .info-value {
+            font-size: 13px;
+            font-weight: 700;
+            color: #334155;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .history-item {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #475569;
+        }
+        .history-item::before {
+            content: '■';
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+            font-size: 10px;
+            top: 2px;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 leading-relaxed">
+
+    <div class="max-w-[480px] mx-auto bg-white min-h-screen shadow-2xl overflow-hidden relative">
+
+        <!-- ナビゲーション -->
+        <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-6 py-3 flex justify-between items-center">
+            <div class="font-black text-xl tracking-tighter text-indigo-600">ITS U-15</div>
+            <a href="#contact" class="bg-indigo-600 text-white text-[10px] font-black px-4 py-2 rounded-full">体験申込</a>
+        </nav>
+
+        <!-- 1. メインビジュアル -->
+        <header class="brand-gradient relative w-full pt-16 pb-20 px-8 text-center text-white">
+            <div class="relative z-10">
+                <div class="inline-block bg-[#ec4899] text-[10px] font-black px-4 py-1 rounded-full tracking-[0.2em] mb-4 border border-white/30">
+                    ITS U-15 GIRLS
+                </div>
+                <h1 class="text-3xl font-black leading-tight tracking-tighter mb-4">
+                    ハンドボールで、<br>
+                    沖縄の未来をつなぐ。
+                </h1>
+                <p class="text-[11px] font-bold opacity-80 leading-relaxed mb-6">
+                    国際旅行社がプロデュースする、<br>
+                    「自立」と「楽しさ」を追求した女子クラブチーム。
+                </p>
+                <div class="flex flex-col items-center justify-center opacity-90">
+                    <p class="text-[10px] font-black tracking-widest uppercase mb-1">supported by</p>
+                    <p class="text-sm font-black border-t border-white/30 pt-1">株式会社 国際旅行社</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 2. 創部の背景 -->
+        <section class="py-12 px-8 bg-white">
+            <div class="text-center mb-10">
+                <h2 class="section-title">創部の背景</h2>
+                <p class="text-[10px] font-bold text-slate-400 mt-2 tracking-widest uppercase text-center">Background</p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="border-l-4 border-indigo-500 pl-4">
+                    <h3 class="text-sm font-black text-indigo-700 mb-2 leading-snug">
+                        少子化と働き方改革、<br>部活動を巡る環境の大きな変化
+                    </h3>
+                    <p class="text-[12px] font-bold text-slate-600 leading-relaxed">
+                        現在、少子化の影響で学校単位でのチーム維持が難しくなっています。また、教員が専門外の顧問を務める体制は、学校の働き方改革が進む中で限界を迎えています。
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-3xl space-y-4">
+                    <h3 class="text-[13px] font-black text-slate-800 text-center mb-2">私たちが解決したい課題</h3>
+                    
+                    <div class="flex items-start space-x-3">
+                        <span class="bg-indigo-600 text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">1</span>
+                        <p class="text-[12px] font-bold text-slate-600">学校に部活がないから諦める、という選択をなくしたい。</p>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <span class="bg-purple-600 text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">2</span>
+                        <p class="text-[12px] font-bold text-slate-600">専門的な指導を提供し、安全かつ正しい技術を伝えたい。</p>
+                    </div>
+
+                    <div class="flex items-start space-x-3">
+                        <span class="bg-pink-600 text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">3</span>
+                        <p class="text-[12px] font-bold text-slate-600">学校、家庭、企業が手を取り合い、新しい「居場所」を作りたい。</p>
+                    </div>
+                </div>
+
+                <p class="text-[12px] font-bold text-indigo-700 leading-relaxed bg-indigo-50 p-4 rounded-xl text-center">
+                    「うちなーんちゅの旅窓」国際旅行社として、<br>子供たちの成長に一生涯伴走します。
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. チーム概要 -->
+        <section class="py-12 px-8 bg-slate-50">
+            <div class="text-center mb-10">
+                <h2 class="section-title">チーム概要</h2>
+                <p class="text-[10px] font-bold text-slate-400 mt-2 tracking-widest uppercase">Overview</p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-4 text-sm">
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+                    <h4 class="font-black text-indigo-600 mb-2">趣旨</h4>
+                    <p class="text-xs font-bold text-slate-600 leading-relaxed">児童生徒がハンドボールを継続して親しむ機会を確保し、普及を目指します。</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+                    <h4 class="font-black text-purple-600 mb-2">目的</h4>
+                    <p class="text-xs font-bold text-slate-600 leading-relaxed">ハンドボールを通した地域社会貢献を追求し、必要とされる会社を目指します。</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+                    <h4 class="font-black text-pink-600 mb-2">ビジョン</h4>
+                    <p class="text-xs font-bold text-slate-600 leading-relaxed">沖縄全土から選手が集まり、永続的に続いていくクラブチームとなります。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. スタッフ紹介 (Gistデータ反映版) -->
+        <section class="py-16 px-6 bg-white">
+            <div class="text-center mb-10">
+                <h2 class="section-title">スタッフ紹介</h2>
+                <p class="text-[10px] font-bold text-slate-400 mt-2 tracking-widest uppercase">Head Coach</p>
+            </div>
+
+            <div class="staff-card">
+                <div class="flex flex-col items-center mb-8">
+                    <div class="w-24 h-24 brand-gradient rounded-[32px] flex items-center justify-center text-5xl mb-4 shadow-xl text-white">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-indigo-600 text-[10px] font-black tracking-widest uppercase mb-1">Director</p>
+                        <h3 class="text-3xl font-black text-slate-900 tracking-tighter">新垣 信明</h3>
+                        <p class="text-[10px] text-slate-400 font-bold mt-1 uppercase tracking-widest">Arakaki Nobuaki</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <span class="info-label"><i class="fa-solid fa-briefcase mr-1.5"></i> 所属</span>
+                        <div class="info-value">
+                            公益財団法人沖縄県スポーツ協会<br>
+                            （国スポ・指導者養成担当）
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="info-label"><i class="fa-solid fa-graduation-cap mr-1.5"></i> 保有資格</span>
+                        <div class="info-value">
+                            ・中学校・高等学校教諭一種免許状（保健体育）<br>
+                            ・JSPO公認ハンドボールコーチ3
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="info-label"><i class="fa-solid fa-trophy mr-1.5"></i> 競技歴</span>
+                        <div class="space-y-1 mt-1">
+                            <p class="history-item">松島中学校：3年時 沖縄県選抜として全国大会出場</p>
+                            <p class="history-item">興南高校：副キャプテンとして全国2位、国体選手</p>
+                            <p class="history-item">福岡大学：九州リーグ全て優勝、全日本インカレ等出場</p>
+                            <p class="history-item">社会人：興南OBチームB.I.Cに所属（ジャパンオープン等）</p>
+                            <p class="text-[10px] text-slate-400 font-bold pl-5 italic">※コロナ禍により現役引退、指導者の道へ</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="info-label"><i class="fa-solid fa-chalkboard-user mr-1.5"></i> 指導歴</span>
+                        <div class="info-value">
+                            天久小HC、松島中学校（男女）の指導を始め5年目。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. メッセージ -->
+        <section class="py-16 px-8 brand-gradient text-white relative">
+            <h3 class="text-xs font-black tracking-[0.2em] uppercase mb-6 flex items-center">
+                <span class="w-8 h-px bg-white/50 mr-3"></span> Message
+            </h3>
+            
+            <h4 class="text-xl font-black mb-8 leading-tight">
+                「指導者」というより、<br>
+                楽しさを伝える<br>
+                <span class="text-2xl border-b-2 border-white/50 pb-1">理解者「伴走者」</span>でありたい。
+            </h4>
+            
+            <div class="space-y-5 text-[13px] font-bold leading-relaxed text-white/95">
+                <p>中学生として「自分で考えて動ける自立心」を育むことを大切にしています。勝ち負けだけにこだわる堅苦しい指導ではなく、生徒たちが自ら目標を見つけ、仲間と協力しながら成長していける環境づくりを目指しています。</p>
+                <p>主役は子どもたちです。選手たちが「どうしたいのか？」を尊重し、主体的に練習に取り組んで欲しいと考えております。</p>
+            </div>
+            
+            <div class="flex justify-end mt-10">
+                <p class="text-sm font-black border-b-2 border-white pb-1 italic">— 新垣 信明</p>
+            </div>
+        </section>
+
+        <!-- 6. Instagram案内 -->
+        <section class="py-16 px-8 bg-white text-center">
+            <h2 class="section-title">公式Instagram</h2>
+            <p class="text-[12px] font-bold text-slate-500 my-8 leading-relaxed">
+                日々の活動や笑顔あふれる日常を<br>
+                随時更新しています。
+            </p>
+            <a href="https://www.instagram.com/its_u15_girls?igsh=dWt6N3lpems4dzA3" 
+               target="_blank" rel="noopener noreferrer"
+               class="flex items-center justify-center w-full brand-gradient text-white font-black py-5 rounded-2xl shadow-xl transition-all active:scale-95 text-base">
+                <i class="fa-brands fa-instagram mr-3 text-xl"></i> Instagramを見る
+            </a>
+        </section>
+
+        <!-- 7. お問い合わせ -->
+        <section id="contact" class="py-20 px-8 bg-slate-900 text-white text-center rounded-t-[50px]">
+            <h2 class="text-3xl font-black mb-4 uppercase tracking-tighter italic">Contact</h2>
+            <p class="text-sm font-medium opacity-80 mb-12">
+                体験入部・見学・ご質問など<br>
+                お気軽にご連絡ください。
+            </p>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeT-XyZmLYG5bYKveuqcHkIbUauHzWMVImY81dHUm8a_jYggQ/viewform" 
+               target="_blank" rel="noopener noreferrer"
+               class="block w-full bg-white text-indigo-600 font-black py-6 rounded-2xl text-lg shadow-2xl active:scale-95 transition-transform">
+                体験・見学を申し込む
+            </a>
+
+            <div class="mt-20 border-t border-white/10 pt-8 opacity-40">
+                <p class="text-[10px] font-black tracking-[0.4em] uppercase">ITS U-15 Handball Club</p>
+                <p class="text-[8px] mt-1 font-bold">PRODUCED BY KOKUSAI TRAVEL AGENCY</p>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
