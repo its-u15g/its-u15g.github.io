@@ -4,70 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITS U-15 | 国際旅行社が発足させたハンドボールチーム</title>
-    
-    <!-- CSSの読み込み順序を最適化 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+        body { font-family: 'Noto Sans JP', sans-serif; scroll-behavior: smooth; }
         
-        body { 
-            font-family: 'Noto Sans JP', sans-serif; 
-            scroll-behavior: smooth; 
-            overflow-x: hidden;
-            background-color: #f1f5f9;
-        }
-        
-        /* 全体を包むコンテナの最大幅設定 */
-        .app-container {
-            max-width: 480px;
-            margin: 0 auto;
-            background-color: white;
-            min-height: 100vh;
-            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-            position: relative;
-        }
-
         .brand-gradient {
             background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
         }
 
-        /* アニメーション用スタイル */
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* 背景画像設定 */
+        /* メインビジュアルの背景画像設定 */
         .hero-image-bg {
-            background-color: #4f46e5;
             background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('IMG_7967.jpg');
             background-size: cover;
             background-position: center 30%;
             background-repeat: no-repeat;
         }
 
+        /* メッセージセクションの背景画像設定 */
         .message-image-bg {
-            background-color: #6366f1;
             background-image: linear-gradient(rgba(79, 70, 229, 0.85), rgba(168, 85, 247, 0.85)), url('IMG_7965.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
 
-        /* コンタクトセクションの背景画像設定 */
+        /* お問い合わせセクションの背景画像設定 */
         .contact-image-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('IMG_7969.jpg');
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('IMG_7969.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: scroll;
         }
         
         .section-title {
@@ -83,21 +51,17 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 0;
+            width: 100%;
             height: 4px;
             background: linear-gradient(to right, #6366f1, #ec4899);
             border-radius: 2px;
-            transition: width 0.6s ease-out 0.3s;
-        }
-        .reveal.active .section-title::after {
-            width: 100%;
         }
 
         .staff-card {
             background: #ffffff;
             border-radius: 40px;
             padding: 2.5rem 1.5rem;
-            box-shadow: 0 15px 30px -5px rgb(0 0 0 / 0.1);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
             border: 1px solid #f1f5f9;
         }
 
@@ -136,30 +100,20 @@
             font-size: 10px;
             top: 2px;
         }
-
-        @keyframes pulse-soft {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        .pulse-icon {
-            animation: pulse-soft 3s infinite ease-in-out;
-        }
     </style>
 </head>
-<body class="text-slate-800 leading-relaxed">
+<body class="bg-slate-100 text-slate-800 leading-relaxed">
 
-    <div class="app-container">
+    <div class="max-w-[480px] mx-auto bg-white min-h-screen shadow-2xl overflow-hidden relative">
 
-        <!-- ナビゲーション（固定ヘッダー） -->
-        <nav id="top-nav" class="sticky top-0 z-[100] bg-white/95 backdrop-blur-md border-b border-slate-100 px-6 py-4 flex justify-between items-center transition-all duration-300">
+        <!-- ナビゲーション（固定化） -->
+        <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-6 py-3 flex justify-between items-center">
             <div class="font-black text-xl tracking-tighter text-indigo-600">ITS U-15</div>
-            <div class="flex items-center gap-3">
-                <a href="#contact" class="bg-indigo-600 text-white text-[10px] font-black px-4 py-2 rounded-full transform active:scale-90 transition-transform shadow-lg shadow-indigo-200">体験申込</a>
-            </div>
+            <a href="#contact" class="bg-indigo-600 text-white text-[10px] font-black px-4 py-2 rounded-full">体験申込</a>
         </nav>
 
         <!-- 1. メインビジュアル -->
-        <header class="hero-image-bg relative w-full pt-16 pb-24 px-8 text-center text-white">
+        <header class="hero-image-bg relative w-full pt-20 pb-24 px-8 text-center text-white">
             <div class="relative z-10">
                 <div class="inline-block bg-[#ec4899]/90 text-[10px] font-black px-4 py-1 rounded-full tracking-[0.2em] mb-4 border border-white/30 backdrop-blur-sm">
                     ITS U-15 GIRLS
@@ -168,11 +122,11 @@
                     ハンドボールで<br>
                     沖縄の未来をつなぐ
                 </h1>
-                <p class="text-[11px] font-bold opacity-90 leading-relaxed mb-8">
+                <p class="text-[11px] font-bold opacity-90 leading-relaxed mb-8 drop-shadow-md">
                     国際旅行社がプロデュースする<br>
                     地域クラブ型の女子ハンドボールチーム
                 </p>
-                <div class="flex flex-col items-center justify-center bg-black/20 backdrop-blur-sm py-3 rounded-2xl border border-white/10">
+                <div class="flex flex-col items-center justify-center opacity-90 bg-black/20 backdrop-blur-sm py-3 rounded-2xl border border-white/10">
                     <p class="text-[10px] font-black tracking-widest uppercase mb-1">supported by</p>
                     <p class="text-sm font-black border-t border-white/30 pt-1">株式会社 国際旅行社</p>
                 </div>
@@ -180,10 +134,10 @@
         </header>
 
         <!-- 2. 創部の背景 -->
-        <section class="py-12 px-8 bg-white reveal">
+        <section class="py-12 px-8 bg-white">
             <div class="text-center mb-10">
                 <h2 class="section-title">創部の背景</h2>
-                <p class="text-[10px] font-bold text-slate-400 mt-2 tracking-widest uppercase">Background</p>
+                <p class="text-[10px] font-bold text-slate-400 mt-2 tracking-widest uppercase text-center">Background</p>
             </div>
             
             <div class="space-y-6">
@@ -192,39 +146,43 @@
                         少子化と働き方改革、<br>部活動を巡る環境の大きな変化
                     </h3>
                     <p class="text-[12px] font-bold text-slate-600 leading-relaxed">
-                        現在、少子化の影響で学校単位でのチーム維持が難しくなっています。学校の働き方改革が進む中で、地域クラブへの移行が急務となっています。
+                        現在、少子化の影響で学校単位でのチーム維持が難しくなっています。また、教員が専門外の顧問を務める体制は、学校の働き方改革が進む中で限界を迎えています。
                     </p>
                 </div>
 
                 <div class="bg-slate-50 p-6 rounded-3xl space-y-4">
                     <h3 class="text-[13px] font-black text-slate-800 text-center mb-2">私たちが解決したい課題</h3>
                     
-                    <div class="flex items-start space-x-3 group transition-all">
-                        <span class="bg-indigo-600 text-white text-[10px] font-black w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                    <div class="flex items-start space-x-3">
+                        <span class="bg-indigo-600 text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                             <i class="fa-solid fa-road"></i>
                         </span>
                         <p class="text-[12px] font-bold text-slate-600">学校に部活がないから諦めるという選択をなくしたい</p>
                     </div>
 
-                    <div class="flex items-start space-x-3 group transition-all">
-                        <span class="bg-purple-600 text-white text-[10px] font-black w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                    <div class="flex items-start space-x-3">
+                        <span class="bg-purple-600 text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                             <i class="fa-solid fa-graduation-cap"></i>
                         </span>
                         <p class="text-[12px] font-bold text-slate-600">専門的な指導を提供し安全かつ正しい技術を伝えたい</p>
                     </div>
 
-                    <div class="flex items-start space-x-3 group transition-all">
-                        <span class="bg-pink-600 text-white text-[10px] font-black w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                    <div class="flex items-start space-x-3">
+                        <span class="bg-pink-600 text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                             <i class="fa-solid fa-house-chimney"></i>
                         </span>
                         <p class="text-[12px] font-bold text-slate-600">学校･家庭･企業が手を取り合い新しい居場所を作りたい</p>
                     </div>
                 </div>
+
+                <p class="text-[12px] font-bold text-indigo-700 leading-relaxed bg-indigo-50 p-4 rounded-xl text-center">
+                    「うちなーんちゅの旅窓」国際旅行社として<br>子供たちの成長に一生涯伴走します
+                </p>
             </div>
         </section>
 
         <!-- 3. チーム概要 -->
-        <section class="py-12 px-8 bg-slate-50 reveal">
+        <section class="py-12 px-8 bg-slate-50">
             <div class="text-center mb-10">
                 <h2 class="section-title">チーム概要</h2>
                 <p class="text-[10px] font-bold text-slate-400 mt-2 tracking-widest uppercase">Overview</p>
@@ -232,7 +190,7 @@
             
             <div class="grid grid-cols-1 gap-4 text-sm">
                 <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex items-start space-x-4">
-                    <div class="w-10 h-10 shrink-0 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-lg pulse-icon">
+                    <div class="w-10 h-10 shrink-0 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-lg">
                         <i class="fa-solid fa-bullseye"></i>
                     </div>
                     <div>
@@ -241,7 +199,7 @@
                     </div>
                 </div>
                 <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex items-start space-x-4">
-                    <div class="w-10 h-10 shrink-0 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-lg pulse-icon">
+                    <div class="w-10 h-10 shrink-0 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-lg">
                         <i class="fa-solid fa-handshake-angle"></i>
                     </div>
                     <div>
@@ -250,7 +208,7 @@
                     </div>
                 </div>
                 <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex items-start space-x-4">
-                    <div class="w-10 h-10 shrink-0 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center text-lg pulse-icon">
+                    <div class="w-10 h-10 shrink-0 bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center text-lg">
                         <i class="fa-solid fa-earth-asia"></i>
                     </div>
                     <div>
@@ -262,7 +220,7 @@
         </section>
 
         <!-- 4. スタッフ紹介 -->
-        <section class="py-16 px-6 bg-white reveal">
+        <section class="py-16 px-6 bg-white">
             <div class="text-center mb-10">
                 <h2 class="section-title">スタッフ紹介</h2>
                 <p class="text-[10px] font-bold text-slate-400 mt-2 tracking-widest uppercase">TEAM STAFF</p>
@@ -276,26 +234,42 @@
                     <div class="text-center">
                         <p class="text-indigo-600 text-[10px] font-black tracking-widest uppercase mb-1">監督</p>
                         <h3 class="text-3xl font-black text-slate-900 tracking-tighter">新垣 信明</h3>
-                        <p class="text-[10px] text-slate-400 font-bold mt-1 tracking-widest uppercase">Arakaki Nobuaki</p>
+                        <p class="text-[10px] text-slate-400 font-bold mt-1 uppercase tracking-widest">Arakaki Nobuaki</p>
                     </div>
                 </div>
 
                 <div class="space-y-6">
                     <div>
                         <span class="info-label"><i class="fa-solid fa-briefcase mr-1.5"></i> 所属</span>
-                        <div class="info-value">公益財団法人沖縄県スポーツ協会</div>
+                        <div class="info-value">
+                            公益財団法人沖縄県スポーツ協会<br>
+                            （国民スポーツ大会・指導者養成事業を担当）
+                        </div>
                     </div>
 
                     <div>
                         <span class="info-label"><i class="fa-solid fa-graduation-cap mr-1.5"></i> 保有資格</span>
-                        <div class="info-value">保健体育教諭一種免許・コーチ3</div>
+                        <div class="info-value">
+                            ・中学校･高等学校教諭一種免許状（保健体育）<br>
+                            ・日本スポーツ協会公認ハンドボールコーチ3
+                        </div>
                     </div>
 
                     <div>
                         <span class="info-label"><i class="fa-solid fa-trophy mr-1.5"></i> 競技歴</span>
-                        <div class="space-y-1">
-                            <p class="history-item">興南高校：全国準優勝</p>
-                            <p class="history-item">福岡大学：九州リーグ優勝</p>
+                        <div class="space-y-1 mt-1">
+                            <p class="history-item">松島中学校：沖縄県選抜として全国大会出場</p>
+                            <p class="history-item">興南高校：副主将としてインターハイ準優勝、国体選手</p>
+                            <p class="history-item">福岡大学：九州リーグ優勝、全日本インカレ出場</p>
+                            <p class="history-item">社会人：興南OB「B.I.C」としてジャパンオープン出場</p>
+                            <p class="text-[10px] text-slate-400 font-bold pl-5 italic">※コロナ禍により現役引退、指導者の道へ</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="info-label"><i class="fa-solid fa-chalkboard-user mr-1.5"></i> 指導歴</span>
+                        <div class="info-value">
+                            天久小HC・松島中学校(男女)の外部コーチとして4年
                         </div>
                     </div>
                 </div>
@@ -303,7 +277,7 @@
         </section>
 
         <!-- 5. メッセージ -->
-        <section class="py-16 px-8 message-image-bg text-white relative reveal">
+        <section class="py-16 px-8 message-image-bg text-white relative">
             <h3 class="text-xs font-black tracking-[0.2em] uppercase mb-6 flex items-center">
                 <span class="w-8 h-px bg-white/50 mr-3"></span> Message
             </h3>
@@ -311,11 +285,12 @@
             <h4 class="text-xl font-black mb-8 leading-tight">
                 「指導者」というより、<br>
                 ハンドボールの楽しさを伝える<br>
-                <span class="text-2xl border-b-2 border-white/50 pb-1 inline-block mt-2">理解者「伴走者」</span>でありたい。
+                <span class="text-2xl border-b-2 border-white/50 pb-1 inline-block mt-2">地域の理解者「伴走者」</span><br class="block sm:hidden">でありたい。
             </h4>
             
             <div class="space-y-5 text-[13px] font-bold leading-relaxed text-white/95">
-                <p>中学生として「自分で考えて動ける自立心」を育むことを大切にしています。仲間と協力しながら成長していける環境づくりを目指しています。</p>
+                <p>中学生として「自分で考えて動ける自立心」を育むことを大切にしています。勝ち負けだけにこだわる堅苦しい指導ではなく、生徒たちが自ら目標を見つけ、仲間と協力しながら成長していける環境づくりを目指しています。</p>
+                <p>主役は子どもたちです。選手たちが「どうしたいのか？」を尊重し、主体的に練習に取り組んで欲しいと考えております。</p>
             </div>
             
             <div class="flex justify-end mt-10">
@@ -324,10 +299,11 @@
         </section>
 
         <!-- 6. Instagram案内 -->
-        <section class="py-16 px-8 bg-white text-center reveal">
+        <section class="py-16 px-8 bg-white text-center">
             <h2 class="section-title">公式Instagram</h2>
-            <p class="text-[12px] font-bold text-slate-500 my-8">
-                日々の活動や日常を<br>随時更新しています。
+            <p class="text-[12px] font-bold text-slate-500 my-8 leading-relaxed">
+                日々の活動や笑顔あふれる日常を<br>
+                随時更新しています。
             </p>
             <a href="https://www.instagram.com/its_u15_girls?igsh=dWt6N3lpems4dzA3" 
                target="_blank" rel="noopener noreferrer"
@@ -336,70 +312,43 @@
             </a>
         </section>
 
-        <!-- 7. お問い合わせ (背景画像IMG_7969.jpgを設定) -->
-        <section id="contact" class="contact-image-bg py-20 px-8 text-white text-center rounded-t-[50px] reveal relative overflow-hidden">
+        <!-- 7. お問い合わせ（背景画像IMG_7969.jpgを設定） -->
+        <section id="contact" class="contact-image-bg py-20 px-8 text-white text-center rounded-t-[50px] relative">
             <div class="relative z-10">
-                <h2 class="text-3xl font-black mb-4 uppercase tracking-tighter italic drop-shadow-lg">Contact</h2>
+                <h2 class="text-3xl font-black mb-4 uppercase tracking-tighter italic">Contact</h2>
                 <p class="text-sm font-medium opacity-90 mb-12 drop-shadow-md">
-                    体験入部・見学・ご質問など<br>お気軽にご連絡ください。
+                    体験入部・見学・ご質問など<br>
+                    お気軽にご連絡ください。
                 </p>
 
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeT-XyZmLYG5bYKveuqcHkIbUauHzWMVImY81dHUm8a_jYggQ/viewform" 
                    target="_blank" rel="noopener noreferrer"
-                   class="block w-full bg-white text-slate-900 font-black py-6 rounded-2xl text-lg shadow-2xl active:scale-95 transition-transform">
+                   class="block w-full bg-white text-indigo-600 font-black py-6 rounded-2xl text-lg shadow-2xl active:scale-95 transition-transform">
                     体験・見学を申し込む
                 </a>
 
-                <div class="mt-20 border-t border-white/20 pt-10 opacity-60">
-                    <p class="text-[10px] font-black tracking-[0.4em] uppercase">ITS U-15 Handball Club</p>
-                    <p class="text-[8px] mt-1 font-bold">© 2026 International Travel Service Inc.</p>
+                <!-- フッター情報 -->
+                <div class="mt-20 border-t border-white/10 pt-10">
+                    <div class="opacity-40 mb-6">
+                        <p class="text-[10px] font-black tracking-[0.4em] uppercase">ITS U-15 Handball Club</p>
+                        <p class="text-[8px] mt-1 font-bold">PRODUCED BY KOKUSAI TRAVEL AGENCY</p>
+                    </div>
+
+                    <!-- 運営会社公式サイトリンク -->
+                    <div class="inline-block bg-white/5 border border-white/10 p-5 rounded-2xl text-left w-full max-w-[320px]">
+                        <p class="text-[9px] font-black text-indigo-400 uppercase mb-2">Operating Company</p>
+                        <p class="text-xs font-black text-white mb-3">株式会社 国際旅行社</p>
+                        <a href="https://its1.jp/" target="_blank" class="flex items-center justify-center w-full bg-white text-indigo-900 py-3 rounded-xl text-[11px] font-black">
+                            企業公式サイトを表示 <i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <p class="text-[9px] text-white/20 mt-10">© 2026 International Travel Service Inc.</p>
                 </div>
             </div>
         </section>
 
     </div>
 
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            
-            // スクロール監視の設定（ふわっと表示）
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.reveal').forEach(el => {
-                observer.observe(el);
-            });
-
-            // ナビゲーションの固定時のエフェクト
-            const nav = document.getElementById('top-nav');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 20) {
-                    nav.classList.add('shadow-md', 'py-2');
-                    nav.classList.remove('py-4');
-                    nav.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-                } else {
-                    nav.classList.remove('shadow-md', 'py-2');
-                    nav.classList.add('py-4');
-                    nav.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-                }
-            });
-            
-            // 最初の要素は即座に表示
-            setTimeout(() => {
-                const firstReveal = document.querySelector('.reveal');
-                if (firstReveal) firstReveal.classList.add('active');
-            }, 300);
-        });
-    </script>
 </body>
 </html>
