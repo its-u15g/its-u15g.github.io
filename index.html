@@ -14,7 +14,7 @@
             background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
         }
 
-        /* メインビジュアルの背景画像設定 */
+        /* 背景画像設定 */
         .hero-image-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('IMG_7967.jpg');
             background-size: cover;
@@ -22,7 +22,6 @@
             background-repeat: no-repeat;
         }
 
-        /* メッセージセクションの背景画像設定 */
         .message-image-bg {
             background-image: linear-gradient(rgba(79, 70, 229, 0.85), rgba(168, 85, 247, 0.85)), url('IMG_7965.jpg');
             background-size: cover;
@@ -30,7 +29,6 @@
             background-repeat: no-repeat;
         }
 
-        /* お問い合わせセクションの背景画像設定 */
         .contact-image-bg {
             background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('IMG_7969.jpg');
             background-size: cover;
@@ -57,7 +55,7 @@
             border-radius: 2px;
         }
 
-        .staff-card {
+        .staff-card, .info-card {
             background: #ffffff;
             border-radius: 40px;
             padding: 2.5rem 1.5rem;
@@ -100,13 +98,19 @@
             font-size: 10px;
             top: 2px;
         }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
     </style>
 </head>
 <body class="bg-slate-100 text-slate-800 leading-relaxed">
 
     <div class="max-w-[480px] mx-auto bg-white min-h-screen shadow-2xl overflow-hidden relative">
 
-        <!-- ナビゲーション（固定化） -->
+        <!-- ナビゲーション -->
         <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-6 py-3 flex justify-between items-center">
             <div class="font-black text-xl tracking-tighter text-indigo-600">ITS U-15</div>
             <a href="#contact" class="bg-indigo-600 text-white text-[10px] font-black px-4 py-2 rounded-full">体験申込</a>
@@ -276,7 +280,56 @@
             </div>
         </section>
 
-        <!-- 5. メッセージ -->
+        <!-- 5. 活動詳細（最新情報を反映） -->
+        <section class="py-16 px-8 bg-slate-50">
+            <div class="text-center mb-10">
+                <h2 class="section-title">活動詳細</h2>
+                <p class="text-[10px] font-bold text-slate-400 mt-2 tracking-widest uppercase">Information</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- スケジュール・場所 -->
+                <div class="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm">
+                    <h4 class="text-xs font-black text-indigo-600 mb-4 flex items-center">
+                        <i class="fa-solid fa-calendar-days mr-2"></i> スケジュール・場所
+                    </h4>
+                    <div class="schedule-grid">
+                        <div class="bg-indigo-50 p-3 rounded-2xl">
+                            <p class="text-[9px] font-black text-indigo-400 mb-1">月曜 (隔週)</p>
+                            <p class="text-[11px] font-black text-indigo-900">17:30-19:30<br><span class="text-[9px] opacity-70">@天久小学校体育館</span></p>
+                        </div>
+                        <div class="bg-indigo-50 p-3 rounded-2xl">
+                            <p class="text-[9px] font-black text-indigo-400 mb-1">火・金曜</p>
+                            <p class="text-[11px] font-black text-indigo-900">17:30-19:30<br><span class="text-[9px] opacity-70">@天久小学校体育館</span></p>
+                        </div>
+                        <div class="bg-purple-50 p-3 rounded-2xl">
+                            <p class="text-[9px] font-black text-purple-400 mb-1">木曜</p>
+                            <p class="text-[11px] font-black text-purple-900">18:00-19:30<br><span class="text-[9px] opacity-70">@松島中学校体育館</span></p>
+                        </div>
+                        <div class="bg-pink-50 p-3 rounded-2xl">
+                            <p class="text-[9px] font-black text-pink-400 mb-1">土・日曜</p>
+                            <p class="text-[11px] font-black text-pink-900">都度調整</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 会費 -->
+                <div class="bg-white p-6 rounded-[32px] border border-slate-100 shadow-sm">
+                    <h4 class="text-xs font-black text-indigo-600 mb-4 flex items-center">
+                        <i class="fa-solid fa-coins mr-2"></i> 会費について
+                    </h4>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-[11px] font-bold text-slate-400">月額</span>
+                        <span class="text-lg font-black text-slate-700">2,000円</span>
+                    </div>
+                    <p class="text-[10px] text-slate-400 font-bold italic border-t border-slate-50 pt-2 text-right">
+                        ※初期登録費用別途あり
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. メッセージ -->
         <section class="py-16 px-8 message-image-bg text-white relative">
             <h3 class="text-xs font-black tracking-[0.2em] uppercase mb-6 flex items-center">
                 <span class="w-8 h-px bg-white/50 mr-3"></span> Message
@@ -298,7 +351,7 @@
             </div>
         </section>
 
-        <!-- 6. Instagram案内 -->
+        <!-- 7. Instagram案内 -->
         <section class="py-16 px-8 bg-white text-center">
             <h2 class="section-title">公式Instagram</h2>
             <p class="text-[12px] font-bold text-slate-500 my-8 leading-relaxed">
@@ -312,7 +365,26 @@
             </a>
         </section>
 
-        <!-- 7. お問い合わせ -->
+        <!-- 8. パートナー紹介 -->
+        <section class="py-16 px-8 bg-slate-50">
+            <div class="text-center mb-10">
+                <h2 class="section-title">パートナー</h2>
+                <p class="text-[10px] font-bold text-slate-400 mt-2 tracking-widest uppercase">Official Partners</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded-2xl flex items-center justify-center aspect-video border border-slate-100 shadow-sm grayscale opacity-70">
+                    <span class="text-[10px] font-black text-slate-400">KOKUSAI TRAVEL</span>
+                </div>
+                <div class="bg-white p-4 rounded-2xl flex items-center justify-center aspect-video border border-slate-100 shadow-sm grayscale opacity-70">
+                    <span class="text-[10px] font-black text-slate-400">PARTNER BRAND</span>
+                </div>
+            </div>
+            <p class="text-[10px] text-center text-slate-400 font-bold mt-8">
+                ITS U-15は、地域の皆様に支えられています。
+            </p>
+        </section>
+
+        <!-- 9. お問い合わせ -->
         <section id="contact" class="contact-image-bg py-20 px-8 text-white text-center rounded-t-[50px] relative">
             <div class="relative z-10">
                 <h2 class="text-3xl font-black mb-4 uppercase tracking-tighter italic">Contact</h2>
@@ -331,10 +403,8 @@
                 <div class="mt-20 border-t border-white/10 pt-10">
                     <div class="opacity-40 mb-6">
                         <p class="text-[10px] font-black tracking-[0.4em] uppercase">ITS U-15 Handball Club</p>
-                        <p class="text-[8px] mt-1 font-bold">PRODUCED BY KOKUSAI TRAVEL AGENCY</p>
                     </div>
 
-                    <!-- 運営会社公式サイトリンク -->
                     <div class="inline-block bg-white/5 border border-white/10 p-5 rounded-2xl text-left w-full max-w-[320px]">
                         <p class="text-[9px] font-black text-indigo-400 uppercase mb-2">Operating Company</p>
                         <p class="text-xs font-black text-white mb-3">株式会社 国際旅行社</p>
