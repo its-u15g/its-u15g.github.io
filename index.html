@@ -13,6 +13,14 @@
         .brand-gradient {
             background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
         }
+
+        /* メインビジュアルの背景画像設定 */
+        .hero-image-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('IMG_7967.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            background-repeat: no-repeat;
+        }
         
         .section-title {
             position: relative;
@@ -82,27 +90,27 @@
 
     <div class="max-w-[480px] mx-auto bg-white min-h-screen shadow-2xl overflow-hidden relative">
 
-        <!-- ナビゲーション：ご提供いただいたコードを維持 -->
+        <!-- ナビゲーション -->
         <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-6 py-3 flex justify-between items-center">
             <div class="font-black text-xl tracking-tighter text-indigo-600">ITS U-15</div>
             <a href="#contact" class="bg-indigo-600 text-white text-[10px] font-black px-4 py-2 rounded-full">体験申込</a>
         </nav>
 
-        <!-- 1. メインビジュアル -->
-        <header class="brand-gradient relative w-full pt-16 pb-20 px-8 text-center text-white">
+        <!-- 1. メインビジュアル（背景画像反映） -->
+        <header class="hero-image-bg relative w-full pt-20 pb-24 px-8 text-center text-white">
             <div class="relative z-10">
-                <div class="inline-block bg-[#ec4899] text-[10px] font-black px-4 py-1 rounded-full tracking-[0.2em] mb-4 border border-white/30">
+                <div class="inline-block bg-[#ec4899]/90 text-[10px] font-black px-4 py-1 rounded-full tracking-[0.2em] mb-4 border border-white/30 backdrop-blur-sm">
                     ITS U-15 GIRLS
                 </div>
-                <h1 class="text-3xl font-black leading-tight tracking-tighter mb-4">
+                <h1 class="text-3xl font-black leading-tight tracking-tighter mb-4 drop-shadow-lg">
                     ハンドボールで<br>
                     沖縄の未来をつなぐ
                 </h1>
-                <p class="text-[11px] font-bold opacity-80 leading-relaxed mb-6">
+                <p class="text-[11px] font-bold opacity-90 leading-relaxed mb-8 drop-shadow-md">
                     国際旅行社がプロデュースする<br>
                     地域クラブ型の女子ハンドボールチーム
                 </p>
-                <div class="flex flex-col items-center justify-center opacity-90">
+                <div class="flex flex-col items-center justify-center opacity-90 bg-black/20 backdrop-blur-sm py-3 rounded-2xl border border-white/10">
                     <p class="text-[10px] font-black tracking-widest uppercase mb-1">supported by</p>
                     <p class="text-sm font-black border-t border-white/30 pt-1">株式会社 国際旅行社</p>
                 </div>
