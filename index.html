@@ -18,8 +18,14 @@
         .hero-image-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('IMG_7967.jpg');
             background-size: cover;
-            /* 修正後：横方向・縦方向ともに中央揃え */
-            background-position: center center;
+            
+            /* 修正のポイント：
+               1つ目の数値（横方向）を「center」から「20%」に変更。
+               これは「画像の左端から20%の位置を、画面の左端に合わせる」という意味になり、
+               相対的に画像全体が右へ移動し、円陣が中央に寄ります。
+            */
+            background-position: 20% center; 
+            
             background-repeat: no-repeat;
         }
 
