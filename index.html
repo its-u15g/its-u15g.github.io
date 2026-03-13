@@ -31,23 +31,19 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-        .section-title {
-            position: relative;
-            display: inline-block;
-            padding-bottom: 8px;
-            font-weight: 900;
-            font-size: 1.25rem;
-            color: #1e293b;
-        }
         .section-title::after {
             content: '';
             position: absolute;
+            bottom: -8px;
             left: 0;
-            bottom: 0;
-            width: 100%;
+            width: 0;
             height: 4px;
-            background: linear-gradient(to right, #6366f1, #ec4899);
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
             border-radius: 2px;
+            transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .section-title.is-active::after {
+            width: 60%;
         }
         .staff-card {
             background: #ffffff;
@@ -454,6 +450,24 @@
         closeBtn.addEventListener('click', closeMenu);
         menuLinks.forEach(link => {
             link.addEventListener('click', closeMenu);
+        });
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-title').forEach(title => {
+            observer.observe(title);
         });
     </script>
     </body>
