@@ -455,11 +455,10 @@
         menuLinks.forEach(link => {
             link.addEventListener('click', closeMenu);
         });
-
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.5
+            threshold: 0.2 // 20%見えたら実行
         };
 
         const observer = new IntersectionObserver((entries) => {
