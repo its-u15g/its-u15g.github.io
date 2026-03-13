@@ -109,12 +109,14 @@
         <button id="close-btn" class="absolute top-6 right-6 text-white text-3xl">
             <i class="fa-solid fa-xmark"></i>
         </button>
-        <nav class="text-center space-y-8">
-            <a href="#concept" class="menu-link block text-white text-xl font-bold">チームコンセプト</a>
-            <a href="#activity" class="menu-link block text-white text-xl font-bold">活動内容</a>
-            <a href="#staff" class="menu-link block text-white text-xl font-bold">スタッフ紹介</a>
-            <a href="#partner" class="menu-link block text-white text-xl font-bold">パートナー</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeT-XyZmLYG5bYKveuqcHkIbUauHzWMVImY81dHUm8a_jYggQ/viewform" target="_blank" class="menu-link block bg-white text-indigo-900 px-8 py-3 rounded-full font-black">体験・見学申込</a>
+        <nav class="text-center space-y-6">
+            <a href="#background" class="menu-link block text-white text-lg font-bold">1. 創部の背景</a>
+            <a href="#concept" class="menu-link block text-white text-lg font-bold">2. チーム概要</a>
+            <a href="#staff" class="menu-link block text-white text-lg font-bold">3. スタッフ紹介</a>
+            <a href="#activity" class="menu-link block text-white text-lg font-bold">4. 活動詳細</a>
+            <a href="#instagram" class="menu-link block text-white text-lg font-bold">5. インスタグラム</a>
+            <a href="#partner" class="menu-link block text-white text-lg font-bold">6. パートナー</a>
+            <a href="#contact" class="menu-link block bg-white text-indigo-900 px-8 py-3 rounded-full font-black">7. CONTACT</a>
         </nav>
     </div>
 
@@ -434,19 +436,15 @@
         const overlay = document.getElementById('menu-overlay');
         const menuLinks = document.querySelectorAll('.menu-link');
 
-        // メニューを開く
         menuBtn.addEventListener('click', () => {
             overlay.classList.remove('opacity-0', 'pointer-events-none');
         });
 
-        // メニューを閉じる関数
         const closeMenu = () => {
             overlay.classList.add('opacity-0', 'pointer-events-none');
         };
 
         closeBtn.addEventListener('click', closeMenu);
-
-        // メニューの項目をクリックしたら自動で閉じる
         menuLinks.forEach(link => {
             link.addEventListener('click', closeMenu);
         });
